@@ -12,11 +12,15 @@ import java.security.ProtectionDomain;
 public class MyAgent {
     public static void premain(String agentArgs, Instrumentation inst) {
         System.out.println("[Agent] Agent loaded");
+        System.out.println("getContextClassLoader"+Thread.currentThread().getContextClassLoader());
+        System.out.println("MyAgent.classLoader"+ MyAgent.class.getClassLoader());
         inst.addTransformer(new Transformer(), true);
+
 
         // 尝试重新转换 HashMap
         try {
             Class<?> cls = Class.forName("java.util.HashMap");
+            System.out.println("Map class "+ cls.hashCode());
             if (inst.isModifiableClass(cls)) {
                 inst.retransformClasses(cls);
             }

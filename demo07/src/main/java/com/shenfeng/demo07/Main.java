@@ -9,7 +9,10 @@ import java.util.Map;
  */
 public class Main {
     public static void main(String[] args) {
+        System.out.println("Main classLoader "+Main.class.getClassLoader());
         Map<String, String> map = new HashMap<>();
+        Class<? extends Map> aClass = map.getClass();
+        System.out.println("map class "+ aClass.hashCode());
         map.put("hello", "world");
     }
 }

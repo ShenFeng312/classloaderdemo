@@ -3,8 +3,6 @@ package com.shenfeng.demo05;
 
 import com.shenfeng.Bean;
 
-import javax.tools.JavaCompiler;
-import javax.tools.ToolProvider;
 import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
