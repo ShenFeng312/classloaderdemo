@@ -1,0 +1,7 @@
+- demo01  展示类加载器关系和类资源目录
+- demo02 展示如何通过控制资源目录顺序决定类的加载
+- demo03 双亲委派模型演示
+- demo04 演示springboot fatjar 工作原理
+- demo05 演示决定类由哪个类加载器加载因素
+- demo06 运行时动态编译
+- demo07 agent 技术
